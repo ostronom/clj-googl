@@ -2,5 +2,8 @@
   (:use [clj-googl.core] :reload)
   (:use [clojure.test]))
 
-(deftest replace-me ;; FIXME: write
-  (is false "No tests have been written."))
+(deftest shorten-test
+	(is (= (shorten "http://google.com") "http://goo.gl/mR2d")))
+
+(deftest expand-test
+	(is (= (expand "http://goo.gl/mR2d") "http://google.com/")))
